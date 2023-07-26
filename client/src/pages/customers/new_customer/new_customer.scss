@@ -1,0 +1,58 @@
+.customer_container {
+    width: 90%;
+    height: 90vh;
+    // justify-content: center;
+    // align-items: center;
+
+    text-align: center;
+
+    button {
+        padding: 10px;
+        width: 15%;
+        border: none;
+        background-color: rgb(16, 8, 35);
+        cursor: pointer;
+        border-radius: 4px;
+        color: #fff;
+    }
+
+    
+    p {
+        padding: 20px;
+        font-size: 20px;
+        color: red;
+        text-align: center;
+    }
+
+    .customer_inputs {
+        display: flex;
+        padding: 20px;
+        gap: 10px;
+
+
+        .input_form_1,
+        .input_form_2 {
+            width: 100%;
+            display: flex;
+            padding: 5px;
+            flex-direction: column;
+            text-align: left;
+
+            input {
+                gap: 20px;
+                width: 100%;
+                justify-content: center;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: none;
+                border-radius: 3px;
+                border: 1px solid gray;
+                outline: none;
+                font-size: 14px;
+            }
+
+        }
+    }
+
+ 
+}

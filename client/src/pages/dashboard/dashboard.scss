@@ -1,0 +1,38 @@
+.widgets {
+    display: flex;
+    padding: 20px;
+    gap: 15px;
+}
+
+.listContainer {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(231, 85, 85, 0.47);
+    padding: 20px;
+    margin: 20px;
+
+    .listTitle {
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px;
+        color: rgb(160, 160, 160);
+    }
+
+    .button {
+        padding: 10px;
+        margin: 10px;
+        width: 15%;
+        border: none;
+        background-color: #c91b00;
+        box-shadow: 2px 4px 10px 1px rgba(231, 85, 85, 0.47);
+
+        cursor: pointer;
+        border-radius: 4px;
+        color: #fff;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #863420;
+            color: #e5e5e5;
+        }
+    }
+}

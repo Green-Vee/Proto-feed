@@ -1,0 +1,94 @@
+.container {
+    // min-width: 30px;
+
+    h2 {
+
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+        padding: 10px;
+        color: rgb(160, 160, 160);
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(5, 0.5fr);
+        gap: 5px;
+        // border: 1px rgb(160, 160, 160) solid;
+        border-radius: 5px;
+        // min-width: 50px;
+        min-height: 15vh;
+        margin: 4px;
+        padding: 2px;
+
+        .product {
+            -webkit-box-shadow: 2px 40px 10px 1px rgba(198, 164, 164, 0.47);
+            box-shadow: 2px 40px 10px 1px rgba(126, 126, 126, 0.47);
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            .product-type {
+                font-weight: bold;
+                color: #333;
+            }
+
+            .product-name {
+                font-weight: bold;
+                color: #333;
+            }
+
+            .product-price {
+                color: #555;
+            }
+
+            .product-sold {
+                color: rgb(23, 101, 23);
+                font-weight: bold;
+            }
+        }
+
+
+        .sold {
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(231, 85, 85, 0.47);
+            background-color: rgb(29, 28, 28);
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            margin: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            .product-type {
+                font-weight: bold;
+                color: #808080;
+            }
+
+            .product-name {
+                font-weight: bold;
+                color: #656363;
+            }
+
+            .product-price {
+                color: #868585;
+            }
+
+            .product-sold {
+                color: rgb(97, 96, 96);
+                font-weight: bold;
+
+                span {
+                    color: rgb(146, 4, 4);
+                }
+            }
+        }
+
+    }
+}

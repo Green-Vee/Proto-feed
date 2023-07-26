@@ -1,0 +1,87 @@
+$lightGreen:white;
+
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $lightGreen;
+
+
+
+    h1 {
+        font-size: 45px;
+        color: #c91b00;
+        margin-bottom: 20px;
+
+    }
+
+    form {
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background-color: transparent;
+        width: 400px;
+        border: #c91b00 2px solid;
+        min-height: 350px;
+        gap: 40px;
+        -webkit-box-shadow: 2px 4px 50px 1px rgba(255, 0, 0, 0.47);
+        box-shadow: 2px 4px 50px 1px rgba(255, 0, 0, 0.47);
+
+
+    }
+
+
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border: #c91b00 2px solid;
+        background-color: #fffcfb;
+        outline: none;
+        font-size: 14px;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(231, 85, 85, 0.47);
+    }
+
+
+    button {
+        padding: 10px;
+        border: none;
+        background: #c91b00;
+        cursor: pointer;
+        border-radius: 4px;
+
+        color: #fff;
+    }
+
+    p {
+        font-size: 12px;
+        color: red;
+        text-align: center;
+    }
+
+    span {
+        font-size: 12px;
+        text-align: center;
+        background-color: #fff;
+        padding: 2px;
+        border-radius: 2px;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(231, 85, 85, 0.47);
+
+        .link {
+            text-decoration: none;
+            color: #c91b00;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+
+
+}

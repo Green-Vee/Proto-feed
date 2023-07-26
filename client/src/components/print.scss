@@ -1,0 +1,60 @@
+.printable-content {
+    position: fixed;
+    min-width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    padding: 80px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    z-index: 1;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+
+        button {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    }
+    @media print{
+        .buttons{
+            display: none;
+        }
+    }
+}
