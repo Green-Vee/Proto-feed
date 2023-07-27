@@ -16,6 +16,8 @@ const App = () => {
       .get("/api/products")
       .then((response) => {
         const products = response.data;
+        //  const  sortedData = [...products].sort((a, b) =>  a.createdAt -b.createdAt);
+
         setProducts(products);
         // console.log(products);
       })
@@ -33,6 +35,17 @@ const App = () => {
     if (product) {
       // Toggle the isSold property
       product.isSold = !product.isSold;
+
+      axios
+        .put(`/api/products/${productId}/toggleIsSold`)
+        .then((response) => {
+          // If the update was successful, you can handle the response as needed
+          setProducts(response.data);
+        })
+        .catch((error) => {
+          // If an error occurred during the update, handle the error
+          console.error("Error updating product:", error);
+        });
 
       // Add the item to the cart
       setCartItems((prevCartItems) => [...prevCartItems, product]);
@@ -73,9 +86,7 @@ const App = () => {
       currentPage * itemsPerPage
     );
 
-    const toggleBuy = (product) => {
-      handleBuyClick(product), handleToggleIsSold(product);
-    };
+    // handleBuyClick(product);
 
     return (
       <div className="productTable">
@@ -102,7 +113,7 @@ const App = () => {
                     // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     disabled={product.isSold === true}
                     type="button"
-                    onClick={() => toggleBuy(product._id)}
+                    onClick={() => handleBuyClick(product._id)}
                   >
                     {product.isSold ? "Sold" : "Buy"}
                   </button>
