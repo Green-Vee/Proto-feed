@@ -27,7 +27,7 @@ const PrintComponent = ({ onClose }) => {
             <th>Price</th>
             <th>Quantity</th>
             <th>KGs</th>
-            <th>Is Sold</th>
+            {/* <th>Is Sold</th> */}
           </tr>
         </thead>
         <tbody>
@@ -38,7 +38,7 @@ const PrintComponent = ({ onClose }) => {
               <td>{item.price}</td>
               <td>{item.quantity}</td>
               <td>{item.kgs}</td>
-              <td>{item.isSold ? "Yes" : "No"}</td>
+              {/* <td>{item.isSold ? "Yes" : "No"}</td> */}
             </tr>
           ))}
         </tbody>

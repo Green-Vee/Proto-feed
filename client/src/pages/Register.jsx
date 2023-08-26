@@ -38,14 +38,14 @@ const Register = () => {
       // toast.error("Passwords do not match");
     } catch (error) {
       toast.error(error.response.data);
-      toast.error(err?.data?.message || err.error);
+      // toast.error(err?.data?.message || err.error);
     }
   };
 
   return (
     <>
       <div className="auth">
-        <h1>Register 1 </h1>
+        <h1>Register  </h1>
         <ToastContainer />
 
         <form onSubmit={handleSubmit}>

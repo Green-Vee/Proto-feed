@@ -73,7 +73,7 @@ const App = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     // Calculate the total number of pages
-    const totalPages = Math.ceil(available_products.length / itemsPerPage);
+    const totalPages = Math.ceil(available_products.length<30 / itemsPerPage);
 
     // Function to handle page navigation
     const handlePageChange = (newPage) => {
@@ -111,7 +111,7 @@ const App = () => {
                 <td>
                   <button
                     // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                    disabled={product.isSold === true}
+                    disabled={cartItems.length > 7}
                     type="button"
                     onClick={() => handleBuyClick(product._id)}
                   >
@@ -338,7 +338,10 @@ const App = () => {
                 Submit
               </button>
 
-              <button type="button" onClick={handleShowCart}>
+              <button
+                type="button"
+                onClick={handleShowCart}
+              >
                 cart {cartItems.length}
               </button>
             </div>

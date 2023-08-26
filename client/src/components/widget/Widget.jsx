@@ -101,7 +101,7 @@ const Widget = ({ type }) => {
           </Link>
 
           <span className="counter">
-            <b>${balance.length}</b>
+            <b>{balance.length}</b>
           </span>
           <span className="link"> </span>
         </div>

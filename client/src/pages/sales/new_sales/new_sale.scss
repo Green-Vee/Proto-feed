@@ -176,33 +176,43 @@ h2 {
     padding: 3px;
     margin: 5px;
     display: flex;
-    justify-content: center;
+    align-content: center;
+    justify-content: center; /* Center the pagination horizontally */
     gap: 3px;
-
+    max-width: 1300px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  
     .active {
-        background-color: #2b1310;
-
+      background-color: #2b1310;
     }
-
-
+  
     button {
-        padding: 8px;
-        border: none;
-        background-color: #c91b00;
-        cursor: pointer;
-        border-radius: 4px;
-        color: #fff;
-        transition: background-color 0.3s ease;
-    }
-
-    button:disabled {
+      padding: 8px 12px; /* Adjust padding for a comfortable button size */
+      font-size: 14px; /* Increase font size for better readability */
+      border: none;
+      background-color: #c91b00;
+      cursor: pointer;
+      border-radius: 4px;
+      color: #fff;
+      transition: background-color 0.3s ease;
+  
+      &:disabled {
         cursor: not-allowed;
         color: #333;
         background-color: #545454;
+      }
     }
-
-}
-
+    
+    /* Ellipsis for many pages */
+    .ellipsis {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      font-weight: bold;
+    }
+  }
+  
 // @media print {
 
 //     .container,

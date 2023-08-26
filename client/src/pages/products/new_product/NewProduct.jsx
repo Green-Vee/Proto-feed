@@ -30,7 +30,7 @@ const ProductForm = () => {
 
   const vat = (prices * 16.5) / 100;
   const price = vat + Number(prices);
-  const data = { productType, name, price, kgs, quantity };
+  // const data = { productType, name, price, kgs, quantity };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,26 +39,43 @@ const ProductForm = () => {
       setValidationErrors({ productType: "Please select a product." });
       return;
     }
-
-    // Clear validation errors if no issues
     setValidationErrors({});
 
-    // Send the form data to the backend using axios
-    axios
-      .post("/api/products/", data)
-      .then((response) => {
-        // console.log("Response from server:", response.data);
+try {
+  const newItems = [];
 
-        toast.success("Product added...");
-      })
-      .catch((error) => {
-        console.error("Error sending data to server:", error);
-        toast.error("Failed to add the product");
-        // Optionally, display an error message or handle the error here
-      });
+  for (let i = 0; i < quantity; i++) {
 
-    // Reset the form after successful submission (you can also handle this in the server's response)
-    setFormData(initialFormData);
+
+    // Create a new item based on the product name, price, and generated ID
+    const newItem = {
+      productType, name, price, kgs, quantity
+      // ... other item properties ...
+    };
+
+    newItems.push(newItem);
+    // console.log(newItems);
+  }
+
+  // Send the form data to the backend using axios
+  axios
+    .post("/api/products/", newItems)
+    .then((response) => {
+      // console.log("Response from server:", response.data);
+
+      toast.success("Product added...");
+    })
+    .catch((error) => {
+      console.error("Error sending data to server:", error);
+      toast.error("Failed to add the product");
+      // Optionally, display an error message or handle the error here
+    });
+
+  // Reset the form after successful submission (you can also handle this in the server's response)
+  setFormData(initialFormData);
+} catch (error) {
+  console.log(error)
+}
   };
 
   return (
@@ -119,7 +136,9 @@ const ProductForm = () => {
             <button type="submit">Add</button>
           </div>
         )}
+
       </form>
+        {/* <h3>{validationErrors}</h3> */}
     </div>
   );
 };

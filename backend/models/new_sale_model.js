@@ -30,10 +30,7 @@ const salesSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    // total: {
-    //   type: Number,
-    //   required: true,
-    // },
+
 
     cartItems: {
       type: Array,
