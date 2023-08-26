@@ -33,7 +33,7 @@ export async function createProduct(req, res) {
 
 export async function getAllProducts(req, res) {
   try {
-    const products = await Product.find().sort({ createdAt: -1 }).limit(24);
+    const products = await Product.find().sort({ createdAt: -1 })
     // console.log(products);
     return res.status(200).json(products);
   } catch (error) {

@@ -30,12 +30,17 @@ const Widget = ({ type }) => {
   const amounts = products?.map((trans) => trans.price);
   // const products = sales?.map((trans) => trans.full_name);
   // console.log(customers);
-
+  
   const total = amounts?.reduce((acc, item) => (acc += item), 0).toFixed(2);
-
+  
   const customers_list = sales?.length;
-  const capital = 2000000000.0;
   const balance = products?.filter((product) => product.isSold === false);
+  
+  const sold = products?.filter((product) => product.isSold === true);
+  const soldAmount = sold?.map((trans) => trans.price);
+  const totalSold = soldAmount?.reduce((acc, item) => (acc += item), 0).toFixed(2);
+  // console.log(totalSold)
+
   const diff = 20;
 
   return (
@@ -47,7 +52,7 @@ const Widget = ({ type }) => {
           </Link>
 
           <span className="counter">
-            <b>${total || 0}</b>
+            <b>{totalSold || 0} MKW </b>
           </span>
           <span className="link"> </span>
         </div>
